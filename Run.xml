@@ -1,3 +1,9 @@
+<If Condition="Me.ZoneId == 7109" >
+	<CustomBehavior File="RunMacro" Macro="/sw clear" />
+	<CustomBehavior File="RunMacro" Macro="/sw play" />
+
+	<CustomBehavior File="RunCode" Code="InstanceTimer.StartTimer();" />
+
 <DisableBehavior Name="Combat" />
 		<CustomBehavior File="ForcedMount" />
 		<RunTo X="474.373" Y="1364.365" Z="110.7738" />
@@ -102,3 +108,6 @@
 		<While Condition="Me.Combat">
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
 		</While>
+		
+	<CustomBehavior File="RunMacro" Macro="/sw pause" />
+</If>
