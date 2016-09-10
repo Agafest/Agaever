@@ -26,7 +26,6 @@
 		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="ForcedMount" />
 		<DisableBehavior Name="Combat" />
-		<CustomBehavior File="Hooks\DoWhen" ActivityName="Silence" Command="Remove" />
 		<CustomBehavior File="Hooks\Avoid" AvoidName="LivingLeaves" ObjectId="7607" Radius="4" ObjectType="AreaTrigger" />
 		
 		<RunTo X="407.84" Y="1581.26" Z="87.73" />
