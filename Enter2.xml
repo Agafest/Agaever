@@ -1,0 +1,27 @@
+<If Condition="Me.ZoneId == 7109 &amp;&amp; Unit(81819, u => u.Distance &lt; 70 &amp;&amp; u.IsAlive) == null">
+	<While Condition="Me.ZoneId == 7109">
+<CustomBehavior File="ForcedMount" />
+		<RunTo X="432.2582" Y="1327.102" Z="125.0079" />	
+		<CustomBehavior File="GoThruPortal" X="420.6615" Y="1308.974" Z="125.4129" />
+		<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.ZoneId != 7109" />
+	</While>
+</If>
+                  
+<While Condition="Me.IsAlive">
+	<If Condition="Me.ZoneId != 7109">
+		<CustomBehavior File="WaitTimer" WaitTime="1000" />
+		<CustomBehavior File="Misc\RunLua" Lua="ResetInstances();" />
+		<If Condition="Object(214885) == null" >
+			<RunTo X="7117.57" Y="197.1" Z="145.211" />
+		</If>
+<CustomBehavior File="ForcedMount" />
+		<CustomBehavior File="GoThruPortal" X="7100.673" Y="194.2674" Z="143.7517" />
+		<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
+	</If>
+	<If Condition="Me.ZoneId == 7109" >
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="Silence" AllowUseDuringCombat="True" UseWhen="Me.HasAura(169495)">
+			<DisableBehavior Name="Combat" />
+			<CustomBehavior File="Misc\RunLua" Lua="MoveForwardStart();" WaitTime="1000" /> 
+			<EnableBehavior Name="Combat" />
+		</CustomBehavior>
+		<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
