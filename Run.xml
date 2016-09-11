@@ -31,7 +31,7 @@
 		<DisableBehavior Name="Combat" />
 		
 		<RunTo X="335.6566" Y="1536.944" Z="88.6158" />
-		<RunTo X="348.922" Y="1535.384" Z="89.25147" />
+		<RunTo X="362.5864" Y="1533.624" Z="90.44534" />
 					<!-- Kill First Pack -->
 		
 		<EnableBehavior Name="Combat" />
