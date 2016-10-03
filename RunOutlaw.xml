@@ -89,7 +89,14 @@
 		<RunTo X="658.1915" Y="1346.211" Z="78.81896" />
 		
 		<RunTo X="690.2807" Y="1314.549" Z="77.29342" />
+
+		<CustomBehavior File="ForcedDismount" />
+		<EnableBehavior Name="Combat" />
 		<CustomBehavior File="WaitTimer" WaitTime="500" />
+		
+		<CustomBehavior File="ForcedMount" />
+		<DisableBehavior Name="Combat" />
+
 		<RunTo X="681.6913" Y="1348.032" Z="78.13107" />
 			
 		<RunTo X="733.5423" Y="1387.004" Z="86.22267" />
