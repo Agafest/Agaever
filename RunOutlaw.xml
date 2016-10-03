@@ -12,6 +12,14 @@
 		<RunTo X="473.0468" Y="1466.695" Z="103.702" />
 		<CustomBehavior File="WaitTimer" WaitTime="300" />
 		<RunTo X="451.8934" Y="1426.132" Z="104.326" />
+
+<EnableBehavior Name="Combat" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="WaitTimer" WaitTime="300" />
+		<CustomBehavior File="WaitTimer" WaitTime="300" />
+		<CustomBehavior File="ForcedMount" />
+		<DisableBehavior Name="Combat" />
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="Silence" Command="Remove" />
 		
 		
 		<RunTo X="401.4069" Y="1429.229" Z="94.02265" />
